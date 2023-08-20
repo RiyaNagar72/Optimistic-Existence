@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+*{
+    font-family :'Poppins', sans-serif;
+    margin:0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+:root{
+    --green:#48514f;
+    --black:#444;
+    --light-color:#777;
+    --box-shadow:.5rem .5rem 0 rgba(22, 160, 133, .2);
+    --text-shadow:.4rem .4rem 0 rgba(0,0,0,.2);
+    --border:.2rem solid var(--green);
+}
+
+html{
+    font-size: 62.5%;
+    overflow-y: scroll;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth; 
+} 
+
+section{
+    padding: 2rem 9%;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .5rem;
+    padding-left: 1rem;
+    border: var(--border);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    color: var(--green);
+    cursor: pointer;
+    font-size: 1.7rem;
+    background-color: #f7f4f4;
+
+}
+
+.btn span{
+    padding: .7rem 1rem;
+    border-radius:.5rem ;
+    background: var(--green);
+    color: #fff;
+    margin-left: .5rem;
+}
+
+.btn:hover{
+    background: #fff;;
+    color: #1bc863;
+    margin-left: 1rem;
+}
+
+ .header{
+    padding: 2rem 9%;
+    position: fixed;
+    top: 0; left:0; right: 0;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+} 
+
+.header .logo {
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.header .logo:hover{
+    color: #1bc863;
+}
+
+.header .navbar a{
+    font-size: 1.5rem;
+    color: var(--light-color);
+    margin-left: 2rem;
+}
+
+.header .navbar a:hover{
+    color: #1bc863;
+}
+
+#menu-btn{
+    font-size:  2.6 rem;
+    border-radius : .5rem;
+    background :#eee;
+    color : #1bc863;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    display: none; 
+}
+
+section{
+    padding: 2rem 7%;
+}
+
+@media(max-width :1200px){
+    html{
+        font-size: 54%;
+    }
+}
+
+
+/* css for adjustment different standard size devices */
+@media(max-width :960px){               /*for dekstop */
+    html{
+        font-size: 54%;
+    }
+    
+    .header{
+        padding: 2rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+
+}
+
+/* from this size the navbar will come under toggle */
+@media(max-width :765px){                   /*for laptop */
+    #menu-btn{
+        display: initial;
+    }
+    
+    .header .navbar{
+        position: absolute;
+        top:115%; 
+        right: 2rem;
+        border-radius: .5rem;
+        box-shadow: var(--box-shadow);
+        width: 30rem;
+        background: #fff;  
+        transform: scale(0);     
+        opacity: 0;
+        transform-origin: top-right;
+        transition: none;
+    }
+
+    .header .navbar.active{
+        transform: scale(1);
+        transition: .1s ease-out;
+        opacity: 1;
+    } 
+
+    .header .navbar a{
+        font-size: 2rem;
+        display: block;
+        margin: 2.5rem;
+    }
+}
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    
+    background: url(https://static.vecteezy.com/system/resources/previews/015/929/060/original/psychiatrist-psychological-support-depression-concept-young-depressed-unhappy-man-patient-cartoon-character-sitting-and-communicating-with-woman-psychologist-during-visit-in-clinic-vector.jpg) no-repeat;
+    background-size:cover;
+    background-position: center;
+    padding-top: 1rem;
+    padding-bottom: 45rem;
+}
+
+.home.content{
+    text-align: center;
+    max-width: 60rem;
+}
+
+.home .content h3{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: rgb(17, 6, 56);
+}
+
+.home .content p{
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgb(17, 9, 63);
+}
+
+
+.inner h4{
+    font-size: 4rem;
+    font-weight: 700;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: #241f65;
+}
+.inner h5{
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+    color: rgb(61, 71, 117);
+}
+.inner p{
+    height: .4rem;
+    width: 100%;
+    font-size: 1.6rem;
+    margin-top: 2.6rem;
+    margin-bottom: 2.6rem;
+    line-height: 2.3;
+}
+
+@media(max-width :450px){
+    html{
+        font-size: 54%;
+    }
+
+    footer{
+        width: 100%;
+    }
+    .container form{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    html{
+        font-size: 54%;
+    }
+    footer {
+      width: 100%;
+    }
+    .services{
+        padding: 2rem;
+    }
+  }
+   
+
+/*  Services Section  */
+/*
+.services{
+    display: flex;
+    position: relative;
+    width: 100%;
+    padding-top: 200px;
+    padding-bottom: 20px;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+/*
+.service{
+   margin-top: 20rem;
+    padding: 4rem 7%;
+    width: 100%;
+    background-color: var(--background);
+} */
+.services .help h1{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    padding-block-start: 2rem;
+    margin-top: 20rem;
+    margin-bottom: 3rem;
+   /* padding-bottom: 3rem; */
+    color: #241f65;
+}
+.main-service{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.main-inner-service{
+    overflow: hidden;
+    box-shadow: 0px 2px 20px #d7dfe2;
+    background: white;
+    border-radius: 0.5rem;
+    width: 350px;
+    height: 700px;
+    margin: 1rem;
+    transition: 250ms all ease-in-out;
+    cursor: pointer;
+
+    flex: 1 1 300px;
+    padding: 1rem;
+}
+.main-inner-service:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 2px 40px #d7dfe2;
+}
+.main-inner-service.service-img img{
+    position: absolute;
+    object-fit: cover;
+    height: 14rem;
+    width: 100%;   
+}
+.service-content{
+    text-align: center;
+    background-color: white;
+}
+.service-content h2{
+    font-size: 22px;
+    padding: 2rem 0;
+}
+.service-content p{
+    font-size: 1.5rem;
+}
+.container{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.write h1{
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    color: #241f65;
+}
+
+.container form{
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 1rem;
+}
+.container input,select,textarea{
+    padding: 1.4rem;
+    background: transparent;
+    border: 1px solid black;
+}
+.container textarea{
+    height: 8rem;
+}
+.container button{
+    width: 8rem;
+    padding: 1.4rem;
+    cursor: pointer;
+    background: rgb(62, 62, 149);
+    color: white;
+}
+
+
+footer{
+    
+    background:rgba(0,0,0,.1);
+    padding-top: 50px;
+    width: 100%;
+}
+.contain{
+    width: 1140px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.footer-content{
+    width: 33.3%;
+}
+h3{
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.footer-content p{
+    font-size: 1.25rem;
+    width: auto;
+    color: #45408d;
+    margin: auto;
+    padding: 7px;
+}
+.footer-content ul{
+    text-align: center;
+}
+.list{
+    padding: 0;
+}
+.list li{
+    width: auto;
+    font-size: 1.25rem;
+    text-align: center;
+    list-style-type:none;
+    padding: 7px;
+    position: relative;
+    
+}
+.list li::before{
+    content: '';
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background: #f18930;
+    transition-duration: .5s;
+}
+.list li:hover::before{
+    width: 70px;
+}
+.social-icons{
+    text-align: center;
+    padding: 0;
+}
+.social-icons li{
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+}
+.social-icons i{
+    color: rgb(77, 61, 121);
+    font-size: 25px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #f18930;
+}
+.social-icons i:hover{
+    color: #f18930;
+}
+.bottom-bar{
+    background: #f18930;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+.bottom-bar p{
+    color: #343434;
+    margin: 0;
+    font-size: 16px;
+    padding: 7px;
+}
+
